@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- scan=true表示自动加载配置，免得改配置重启服务器 -->
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+	<!-- 自定义常量 -->
+	<!-- 日志级别：trace < debug < info < error -->
+	<properity name="log.level" value="debug"/>
+	<properity name="log.maxHistory" value="30"/>
+	<properity name="log.filePath" value="${catalina.base}/logs/webapps"/>
+	<properity name="log.pattern" value="%d{yyyy-MM-dd HH:mm:ss:SSS} [%thread] %-5level %logger{50} -%msg%n"/>
+	
+	<!-- 控制台设置 -->
+	<appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>${log.pattern}</pattern>
+		</encoder>
+	</appender>
+	
+	<!-- DEBUG -->
+	
+</configuration>

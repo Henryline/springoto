@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Configuration 3.0//EN" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.imooc.o20.dao.AreaDao">
+	<select id="queryArea" resultType="com.imooc.o20.entity.Area">
+		SELECT area_id,area_name,priority,create_time,last_edit_time 
+		from tb_area
+		ORDER BY priority DESC 
+	</select>
+</mapper>
